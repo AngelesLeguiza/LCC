@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio - Leguiza Angeles</title>
+    <link rel="stylesheet" href="style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="Boton" href="#Inicio">Inicio</a></li>
+                <li><a class="Boton" href="#Sobre-mi">Sobre mi</a></li>
+                <li><a class="Boton" href="#Proyectos">Proyectos</a></li>
+                <li><a class="Boton" href="#Contacto">Contacto</a></li>
+                <li><a class="Boton" href="#Referencias">Referencias</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <br><br><h1>Mi Porfolio</h1>
+
+        <br><section id="Inicio">
+            <h2>Angeles Leguiza</h2>
+            <h3>Licenciada en Ciencias de la Computacion</h3>
+            <p><h4 class="texto">Bienvenida/o a mi porfolio
+            </h4></p>
+        </section>
+
+        <br><br><section id="Sobre-mi">
+            <h2>Sobre Mi</h2>
+            <p><h4 class="texto">Soy Angeles, tengo 20 años, soy estudiante de FCEFN, soy Tecnica en Construcciones, y estoy en 2° año de la carrera Licenciatura
+                en Ciencias de la Computacion en la Facultad de Ciencias Exactas Fisicas y Naturales</h4></p>
+
+            <p>Mi doble formación en <strong>Ciencias de la Computación</strong> y <strong>Construcciones</strong> me brinda una ventaja única: combino la precisión técnica con la capacidad de ejecutar proyectos desde la idea hasta el resultado final.</p>
+            
+            <p>💡 <strong>Por qué contratarme:</strong><br>
+            - Aprendo rápido y me adapto a nuevas tecnologías<br>
+            - Tengo mentalidad de resolución de problemas<br>
+            - Comprometida con la calidad y los detalles<br>
+            - Trabajo bien tanto en equipo como de forma autónoma</p>
+            
+            <p>Busco una oportunidad donde pueda aportar valor inmediato mientras continúo desarrollando mis habilidades en entornos tecnológicos desafiantes.</p>
+            <img src="Imagenes/Perfil.jpg" alt="Foto de perfil">
+        </section>
+
+        <br><br><section id="Proyectos">
+            <h2>Proyectos Propios</h2>
+            <div class="proyectos-container">
+                <!-- Proyecto 1 -->
+                <article class="proyecto">
+                    <img src="Imagenes/proyecto-portfolio.jpg" alt="Portfolio personal" class="proyecto-imagen">
+                    <div class="proyecto-contenido">
+                        <h3>Portfolio Personal</h3>
+                        <p>Mi propio sitio web portfolio desarrollado con HTML5, CSS3 y JavaScript. Diseño responsive con enfoque mobile-first y paleta de colores personalizada.</p>
+                        <div class="proyecto-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="proyecto-enlace">Ver más</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="proyecto">
+                    <img src="Imagenes/proyecto-calculadora.jpg" alt="Calculadora web" class="proyecto-imagen">
+                    <div class="proyecto-contenido">
+                        <h3>Calculadora Interactiva</h3>
+                        <p>Calculadora web funcional con operaciones básicas y diseño moderno. Desarrollada como práctica de lógica de programación y manipulación del DOM.</p>
+                        <div class="proyecto-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="proyecto-enlace">Ver más</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="proyecto">
+                    <img src="Imagenes/proyecto-landing.jpg" alt="Landing page" class="proyecto-imagen">
+                    <div class="proyecto-contenido">
+                        <h3>Landing Page para Cafetería</h3>
+                        <p>Diseño de landing page responsiva para una cafetería local. Incluye menú interactivo, galería de productos y formulario de contacto.</p>
+                        <div class="proyecto-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Flexbox</span>
+                        </div>
+                        <a href="#" class="proyecto-enlace">Ver más</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4 -->
+                <article class="proyecto">
+                    <img src="Imagenes/proyecto-clima.jpg" alt="App del clima" class="proyecto-imagen">
+                    <div class="proyecto-contenido">
+                        <h3>App del Clima</h3>
+                        <p>Aplicación web que muestra el pronóstico del clima utilizando una API externa. Practica de consumo de APIs y manejo de datos asíncronos.</p>
+                        <div class="proyecto-tecnologias">
+                            <span>JavaScript</span>
+                            <span>APIs</span>
+                            <span>CSS3</span>
+                        </div>
+                        <a href="#" class="proyecto-enlace">Ver más</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <br><br><section id="Habilidades">
+            <h2>Habilidades</h2>
+            <ul class="ul">
+                <li class="li">HTML5</li>
+                <li class="li">CSS3</li>
+                <li class="li">JavaScript</li>
+                <li class="li">Python</li>
+            </ul>
+        </section>
+
+        <br><br><section id="Contacto">
+            <div id="Contactos">
+                <h2>Contacto</h2>
+                <form>
+                    <label for="nombre">Nombre: </label>
+                    <input name="nombre" type="text" placeholder="Ingrese su nombre" required>
+                    
+                    <label for="email">Email: </label>
+                    <input name="email" type="email" placeholder="Ingrese su correo" required>
+                    
+                    <label for="mensaje">Mensaje: </label>
+                    <textarea name="mensaje" placeholder="Escriba su mensaje" required></textarea>
+                    
+                    <button class="Boton" type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div id="Redes">
+                <h2>Enlaces Sociales</h2>
+                <ul class="ul">
+                    <li class="li"><a id="Boton" class="a" href="https://github.com/AngelesLeguiza" target="_blank">GitHub</a></li>
+                    <li class="li"><a id="Boton" class="a" href="https://linkedin.com/in/angelesleguiza" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <br><br><section id="Referencias">
+            <h2>Referencias</h2>
+            <br>
+            <blockquote class="referencia"><span>★</span><span>★</span><span>★</span><span>★</span> — "Angeles mostró excelentes habilidades en el desarrollo frontend durante su participación en nuestro curso intensivo. Aprende rápido y aplica bien los conceptos."— Ing. Roberto Silva, Instructor en Coding Bootcamp</blockquote>
+            <br>
+            <blockquote class="referencia">"Angeles fue mi estudiante en la materia Programación I. Siempre mostró gran dedicación y capacidad para resolver problemas. Entrega sus trabajos en tiempo y forma, y demuestra buen entendimiento de los conceptos básicos de programación."— Prof. Alejandro Torres, Universidad Nacional de San Juan</blockquote>
+            <br>
+            <blockquote class="referencia"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> — "Colaboré con Angeles en un proyecto de la facultad para crear una página web estática. Es organizada, cumple con los plazos y tiene buena capacidad de aprendizaje. Trabaja bien en equipo y está siempre dispuesta a ayudar a sus compañeros."— Juan Pérez, Compañero de cursado</blockquote>
+            <br>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto - Mail: angelesleguiza28@gmail.com - Teléfono: 2646730695 - ©2025 Leguiza Angeles</p>
+    </footer>
+</body>
+</html>
