@@ -1,0 +1,243 @@
+/* PALETA DE COLORES :) */
+:root {                                         
+    --Primario: #e671ab;    /* Colores principales */
+    --Hover: #f472b6;
+    --Bordes: #d86293;
+                                               
+    --Texto: #831843;   /* Colores de texto */
+    --TextoClaro: #fdf2f8;
+                                                
+    --FondoClaro: #fdf2f8;  /* Colores de fondo */
+    --FondoMedio: #f0bfda;
+    --FondoOscuro: #df69a4;
+                                                
+    --accent-purple: #a855f7;   /* Colores de acento */
+    --Enlace: #f17aca;
+                                                
+    --SombraSuave: rgba(236, 72, 153, 0.1); /* Sombras */
+    --SombraMedia: rgba(236, 72, 153, 0.2);
+    --SombraOscura: rgba(236, 72, 153, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('Imagenes/Cursor.png') 16 16, auto;
+    
+}
+
+.ul {
+    list-style-type: none;
+}
+
+.li {
+    width: 80%;
+    max-width: 300px;
+}
+
+.a {
+    background-color: var(--Enlace);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.a:hover {
+    background-color: var(--Hover);
+    color: black;
+    transform: translateY(-1px);
+} 
+
+.Boton {
+    cursor: url('Imagenes/Pointer.png') 16 16, auto;
+}
+
+#Boton{
+    cursor: url('Imagenes/Pointer.png') 16 16, auto;
+}
+
+.texto {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--Texto);
+    text-align: center;
+    margin-bottom: 1rem;
+    background-image: url("Imagenes/Fondo.jpg");
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background-color: var(--FondoOscuro);
+    box-shadow: 0 2px 20px var(--SombraOscura);
+    height: 3.5rem;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 0.5rem;
+    flex-wrap: wrap; 
+}
+
+nav li {
+    margin: 0.5rem 1rem;
+}
+
+nav a {
+    color: var(--TextoClaro);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: pink;
+    color: black;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+} 
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+section {
+    padding: auto;
+    border-radius: 1rem;
+    background-color: var(--FondoMedio);
+    border: 3px solid var(--Bordes);
+    box-shadow: 0 4px 6px var(--SombraOscura);
+    scroll-margin-top: 4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--SombraOscura);
+}
+
+#Sobre-mi {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#Sobre-mi img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--Primario);
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px var(--SombraMedia);
+}
+
+#Contacto {
+    display: flex;
+}
+
+#Contactos {
+    flex: 0 0 48%;
+}
+
+form {
+    max-width: 350px;
+    margin: 40px auto;
+    padding: 1.5rem;
+    background-color: var(--FondoClaro);
+    border-radius: 10px;
+    border: 2px solid var(--Primario);
+    box-shadow: 0 4px 10px var(--SombraMedia);
+    text-align: left;
+}
+
+label {
+    font-size: 20px;
+    text-align: left;
+}
+
+input, textarea {
+    border-radius: 5px;
+    border: 2px groove var(--Primario);
+    background-color: #eed6e4;
+}
+
+button {
+    background-color: var(--Enlace);
+    border: 2px solid var(--Primario);
+    border-radius: 3px;
+    color: white;
+    width: 50px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--Hover);
+    color: black;
+    transform: translateY(-1px);
+}
+
+#Redes {
+    flex: 0 0 48%;
+}
+
+#Contacto .ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#Contacto .li:hover {
+    transform: translateY(-1px);
+}
+
+.referencia {
+    align-items: center;
+    margin: 0 auto;
+    background: var(--FondoClaro);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--Primario);
+    box-shadow: 0 4px 15px var(--SombraMedia);
+    transition: all 0.3s ease;
+    width: 90%;
+    position: relative;
+}
+
+footer {
+    background-color: var(--FondoOscuro);
+    color: var(--TextoClaro);
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
