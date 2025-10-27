@@ -1,166 +1,280 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio - Leguiza Angeles</title>
     <link rel="stylesheet" href="style.css">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');</style>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
+    <script src="script.js"></script>
+</head>
+
 <body>
     <header>
-        <nav>
+        <nav> <!-- Navegador -->
             <ul>
-                <li><a class="Boton" href="#Inicio">Inicio</a></li>
-                <li><a class="Boton" href="#Sobre-mi">Sobre mi</a></li>
-                <li><a class="Boton" href="#Proyectos">Proyectos</a></li>
-                <li><a class="Boton" href="#Contacto">Contacto</a></li>
-                <li><a class="Boton" href="#Referencias">Referencias</a></li>
+                <li><a href="#Inicio" class="Pointer">Inicio</a></li>
+                <li class="menusubmenu">
+                    <a href="#Sobre-mi" class="Pointer">Sobre mi</a>
+                    <ul class="submenu">
+                        <li><a href="#Estudios" class="Pointer">Estudios</a></li>
+                        <li><a href="#Habilidades" class="Pointer">Habilidades</a></li>
+                    </ul>
+                </li>
+                <li class="menusubmenu">
+                    <a href="#Proyectos" class="Pointer">Proyectos</a>
+                    <ul class="submenu">
+                        <li><a href="#proyecto1" class="Pointer">Gestion Biblioteca</a></li>
+                        <li><a href="#proyecto2" class="Pointer">Calculadora Interactiva</a></li>
+                        <li><a href="#proyecto3" class="Pointer">Tareas Personales</a></li>
+                        <li><a href="#proyecto4" class="Pointer">Reservas Restaurante</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Contacto" class="Pointer">Contacto</a></li>
+                <li><a href="#Referencias" class="Pointer">Referencias</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <br><br><h1>Mi Porfolio</h1>
+        <br><br>
+        <h1 class="titulo">Mi Porfolio</h1>
 
-        <br><section id="Inicio">
+        <br>
+        <section id="Inicio"> <!-- Inicio -->
             <h2>Angeles Leguiza</h2>
-            <h3>Licenciada en Ciencias de la Computacion</h3>
-            <p><h4 class="texto">Bienvenida/o a mi porfolio
-            </h4></p>
+            <h3>Licenciada en Ciencias de la Computación</h3>
+            <p><h4 class="texto">Bienvenida/o a mi porfolio</h4></p>
         </section>
 
-        <br><br><section id="Sobre-mi">
-            <h2>Sobre Mi</h2>
-            <p><h4 class="texto">Soy Angeles, tengo 20 años, soy estudiante de FCEFN, soy Tecnica en Construcciones, y estoy en 2° año de la carrera Licenciatura
-                en Ciencias de la Computacion en la Facultad de Ciencias Exactas Fisicas y Naturales</h4></p>
+        <br><br>
+        <section id="Sobre-mi"> <!-- Sobre Mi -->
+            <h2 class="titulo">Sobre Mí</h2><br>
 
-            <p>Mi doble formación en <strong>Ciencias de la Computación</strong> y <strong>Construcciones</strong> me brinda una ventaja única: combino la precisión técnica con la capacidad de ejecutar proyectos desde la idea hasta el resultado final.</p>
-            
-            <p>💡 <strong>Por qué contratarme:</strong><br>
-            - Aprendo rápido y me adapto a nuevas tecnologías<br>
-            - Tengo mentalidad de resolución de problemas<br>
-            - Comprometida con la calidad y los detalles<br>
-            - Trabajo bien tanto en equipo como de forma autónoma</p>
-            
-            <p>Busco una oportunidad donde pueda aportar valor inmediato mientras continúo desarrollando mis habilidades en entornos tecnológicos desafiantes.</p>
-            <img src="Imagenes/Perfil.jpg" alt="Foto de perfil">
-        </section>
+            <div class="contenedor">
+                <div class="izquierdo"> <!-- Perfil -->
+                    <div>
+                        <h3>Mi Perfil Profesional</h3>
+                        <p>Mi doble formación en <strong>Ciencias de la Computación</strong> y
+                            <strong>Construcciones</strong> me permite combinar la precisión técnica 
+                            con la capacidad de ejecutar proyectos desde la idea hasta el resultado final.</p>
+                    </div><br>
 
-        <br><br><section id="Proyectos">
-            <h2>Proyectos Propios</h2>
-            <div class="proyectos-container">
-                <!-- Proyecto 1 -->
-                <article class="proyecto">
-                    <img src="Imagenes/proyecto-portfolio.jpg" alt="Portfolio personal" class="proyecto-imagen">
-                    <div class="proyecto-contenido">
-                        <h3>Portfolio Personal</h3>
-                        <p>Mi propio sitio web portfolio desarrollado con HTML5, CSS3 y JavaScript. Diseño responsive con enfoque mobile-first y paleta de colores personalizada.</p>
-                        <div class="proyecto-tecnologias">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="proyecto-enlace">Ver más</a>
+                    <div>
+                        <h3>¿Por qué contratarme?</h3>
+                        <ul>
+                            <li>- Me gusta aprender cosas nuevas y me adapto rápido a los cambios</li>
+                            <li>- Cuando encuentro un problema, no me rindo hasta encontrar una solución</li>
+                            <li>- Le doy importancia a los detalles, creo que las pequeñas cosas marcan la diferencia</li>
+                            <li>- Me siento cómoda trabajando sola, pero disfruto más cuando es en equipo</li>
+                            <li>- Sé escuchar y puedo explicar cosas técnicas de manera simple</li>
+                            <li>- Me organizo bien y cumplo con lo que prometo</li>
+                            <li>- Tengo esa curiosidad que me hace querer entender cómo funcionan las cosas por dentro</li>
+                        </ul>
                     </div>
-                </article>
+                </div>
 
-                <!-- Proyecto 2 -->
-                <article class="proyecto">
-                    <img src="Imagenes/proyecto-calculadora.jpg" alt="Calculadora web" class="proyecto-imagen">
-                    <div class="proyecto-contenido">
+                <div class="derecho">
+                    <figure>
+                        <img src="Imagenes/Perfil.jpg" alt="Foto Perfil">
+                        <figcaption>Soy Angeles, tengo 20 años, soy Tecnica en Construcciones, y estudiente
+                            en 2° año de la carrera Licenciatura en Ciencias de la Computacion en la FCEFN de la UNSJ
+                        </figcaption>
+                    </figure> 
+                    <br>
+                    <p>Me gusta tomarme el tiempo para entender bien lo que hay que hacer. Soy de las que se centra en los 
+                        detalles, pero siempre con un punto de vista realista ante lo que se desea hacer.</p>
+                    
+                    <p>Creo que lo más importante es tener buena actitud y la energia ante enfrentan las situeciones. Todavía 
+                        me queda mucho camino por recorrer, pero voy con muchas ganas y dispuesta a aprender.</p>
+                </div>
+            </div><br>
+
+            <div class="contenedor">
+                <div class="izquierdo" id="Estudios"> <!-- Estudios -->
+                    <h2 class="titulo">Estudios</h2>
+                    <ul>
+                        <h4 class="texto">
+                            <li>- Tecnica en Construcciones</li>
+                            <li>- Tecnicatura en Desarrollo de Software (Estudiente)</li>
+                            <li>- Licenciatura en Ciencias de la Computacion (Estudiante)</li>
+                        </h4>
+                    </ul>
+                </div><br>
+
+                <div class="derecho" id="Habilidades"> <!-- Habilidades -->
+                    <h2 class="titulo">Habilidades</h2><br>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Icono HTML5">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Icono CSS3">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Icono JavaScript">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="Icono C++">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Icono Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="Icono mysql">
+                    <img src="Imagenes/autocad.png" alt="Icono Autocad">
+                    <img src="Imagenes/octave.png" alt="Icono octave">
+                </div>
+            </div>
+        </section>
+
+        <br><br>
+        <section id="Proyectos">
+            <h2 class="titulo">Proyectos Propios</h2>
+            <div>
+                <article id="proyecto1"> <!-- Proyecto 1 -->
+                    <div class="Proyect-Titulo">
+                        <h3>Gestión de Biblioteca</h3>
+                        <label for="Abrir1" class="Button"><i class="fi fi-br-angle-down"></i></label>
+                        <input type="checkbox" id="Abrir1" class="proyecto-checkbox">
+                    </div>
+                    <div class="Proyect-Contenido" id="Contenido1">
+                        <div class="Informacion">
+                            <p>Plataforma web completa para administración de bibliotecas. Permite gestionar inventario de
+                            libros, registrar préstamos, controlar devoluciones y generar reportes estadísticos
+                            automatizados.</p>
+                            <p>Desarrollé esta solución pensando en hacer más accesible la gestión bibliotecaria, 
+                            especialmente para instituciones educativas o comunitarias que necesitan organizar sus 
+                            recursos de manera simple pero efectiva. La interfaz está diseñada para ser intuitiva, 
+                            permitiendo que cualquier persona pueda usarla sin necesidad de capacitación extensa.</p><br>
+                            <a id="BotonVerMas" class="Button" href="#">Ver más</a>
+                        </div>
+                        <div class="Imagen">
+                            <img src="Imagenes/biblioteca.png" alt="Sistema de biblioteca">
+                        </div>
+                    </div>
+                </article><br>
+
+                <article id="proyecto2"> <!-- Proyecto 2 -->
+                    <div class="Proyect-Titulo">
                         <h3>Calculadora Interactiva</h3>
-                        <p>Calculadora web funcional con operaciones básicas y diseño moderno. Desarrollada como práctica de lógica de programación y manipulación del DOM.</p>
-                        <div class="proyecto-tecnologias">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="proyecto-enlace">Ver más</a>
+                        <label for="Abrir2" class="Button"><i class="fi fi-br-angle-down"></i></label>
+                        <input type="checkbox" id="Abrir2" class="proyecto-checkbox">
                     </div>
-                </article>
+                    <div class="Proyect-Contenido" id="Contenido2">
+                        <div class="Informacion">
+                            <p>Calculadora web funcional con operaciones básicas y diseño moderno. Desarrollada como
+                            práctica de lógica de programación y manipulación del DOM.</p>
+                            <p>Este proyecto me permitió entender a fondo cómo capturar interacciones del usuario y 
+                            procesarlas en tiempo real. Más allá de las operaciones matemáticas, me enfoqué en crear 
+                            una experiencia fluida con feedback visual inmediato, manejo de errores y una interfaz 
+                            que responde naturalmente a cada clic.</p><br>
+                            <a class="Button" href="#">Ver más</a>
+                        </div>
+                        <div class="Imagen">
+                            <img src="Imagenes/calculadora.png" alt="Calculadora web">
+                        </div>
+                    </div>
+                </article><br>
 
-                <!-- Proyecto 3 -->
-                <article class="proyecto">
-                    <img src="Imagenes/proyecto-landing.jpg" alt="Landing page" class="proyecto-imagen">
-                    <div class="proyecto-contenido">
-                        <h3>Landing Page para Cafetería</h3>
-                        <p>Diseño de landing page responsiva para una cafetería local. Incluye menú interactivo, galería de productos y formulario de contacto.</p>
-                        <div class="proyecto-tecnologias">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>Flexbox</span>
-                        </div>
-                        <a href="#" class="proyecto-enlace">Ver más</a>
+                <article id="proyecto3"> <!-- Proyecto 3 -->
+                    <div class="Proyect-Titulo">
+                        <h3>Gestor de Tareas Personales</h3>
+                        <label for="Abrir3" class="Button"><i class="fi fi-br-angle-down"></i></label>
+                        <input type="checkbox" id="Abrir3" class="proyecto-checkbox">
                     </div>
-                </article>
+                    <div class="Proyect-Contenido" id="Contenido3">
+                        <div class="Informacion">
+                            <p>Aplicación web para gestionar tareas diarias. Permite agregar, editar, eliminar y marcar
+                            tareas como completadas. Los datos se almacenan localmente en el navegador.</p>
+                            <p>Creé esta aplicación para resolver mi propia necesidad de organizar el día a día. 
+                            Lo más valioso fue implementar el almacenamiento local, lo que significa que tus tareas 
+                            permanecen guardadas incluso después de cerrar el navegador. Es sorprendente cómo algo 
+                            tan simple puede hacer una gran diferencia en la productividad personal.</p><br>
+                            <a class="Button" href="#">Ver más</a>
+                        </div>
+                        <div class="Imagen">
+                            <img src="Imagenes/tareas.png" alt="Lista de tareas">
+                        </div>
+                    </div>
+                </article><br>
 
-                <!-- Proyecto 4 -->
-                <article class="proyecto">
-                    <img src="Imagenes/proyecto-clima.jpg" alt="App del clima" class="proyecto-imagen">
-                    <div class="proyecto-contenido">
-                        <h3>App del Clima</h3>
-                        <p>Aplicación web que muestra el pronóstico del clima utilizando una API externa. Practica de consumo de APIs y manejo de datos asíncronos.</p>
-                        <div class="proyecto-tecnologias">
-                            <span>JavaScript</span>
-                            <span>APIs</span>
-                            <span>CSS3</span>
-                        </div>
-                        <a href="#" class="proyecto-enlace">Ver más</a>
+                <article id="proyecto4"> <!-- Proyecto 4 -->
+                    <div class="Proyect-Titulo">
+                        <h3>ReservaFácil - Sistema de Reservas</h3>
+                        <label for="Abrir4" class="Button"><i class="fi fi-br-angle-down"></i></label>
+                        <input type="checkbox" id="Abrir4" class="proyecto-checkbox">
                     </div>
-                </article>
+                    <div class="Proyect-Contenido" id="Contenido4">
+                        <div class="Informacion">
+                            <p>Aplicación web para gestión de reservas en restaurantes. Permite a los clientes reservar
+                            mesas online y al personal administrar disponibilidad y horarios.</p>
+                            <p>Desarrollé este sistema pensando en la experiencia tanto del cliente como del restaurante. 
+                            Los comensales pueden ver en tiempo real qué mesas están disponibles, mientras que el personal 
+                            tiene una visión clara de la ocupación del día. Fue fascinante resolver el desafío de 
+                            sincronizar múltiples reservas sin conflictos de horarios.</p><br>
+                            <a class="Button" href="#">Ver más</a>
+                        </div>
+                        <div class="Imagen">
+                            <img src="Imagenes/reservas.png" alt="Sistema de reservas">
+                        </div>
+                    </div>
+                </article><br>
             </div>
         </section>
 
-        <br><br><section id="Habilidades">
-            <h2>Habilidades</h2>
-            <ul class="ul">
-                <li class="li">HTML5</li>
-                <li class="li">CSS3</li>
-                <li class="li">JavaScript</li>
-                <li class="li">Python</li>
-            </ul>
-        </section>
+        <br><br>
+        <section id="Contacto">
+            <div class="contenedor">
+                <div class="izquierdo"> <!-- Formulario -->
+                    <h2 class="titulo">Contacto</h2>
+                    <form>
+                        <label for="nombre">Nombre: </label>
+                        <input name="nombre" type="text" placeholder=" Ingrese su nombre">
 
-        <br><br><section id="Contacto">
-            <div id="Contactos">
-                <h2>Contacto</h2>
-                <form>
-                    <label for="nombre">Nombre: </label>
-                    <input name="nombre" type="text" placeholder="Ingrese su nombre" required>
-                    
-                    <label for="email">Email: </label>
-                    <input name="email" type="email" placeholder="Ingrese su correo" required>
-                    
-                    <label for="mensaje">Mensaje: </label>
-                    <textarea name="mensaje" placeholder="Escriba su mensaje" required></textarea>
-                    
-                    <button class="Boton" type="submit">Enviar</button>
-                </form>
-            </div>
+                        <label for="email">Email: </label>
+                        <input name="email" type="email" placeholder=" Ingrese su correo">
 
-            <div id="Redes">
-                <h2>Enlaces Sociales</h2>
-                <ul class="ul">
-                    <li class="li"><a id="Boton" class="a" href="https://github.com/AngelesLeguiza" target="_blank">GitHub</a></li>
-                    <li class="li"><a id="Boton" class="a" href="https://linkedin.com/in/angelesleguiza" target="_blank">LinkedIn</a></li>
-                </ul>
+                        <label for="mensaje">Mensaje: </label>
+                        <textarea name="mensaje" placeholder=" Escriba su mensaje"></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+
+                <div class="derecho">
+                    <h2 class="titulo">Enlaces Sociales</h2><br> <!-- Redes -->
+                    <ul>
+                        <li><a class="Button" href="https://github.com/AngelesLeguiza" target="_blank">GitHub</a></li>
+                        <li><a class="Button" href="https://linkedin.com/in/angelesleguiza" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <br><br><section id="Referencias">
-            <h2>Referencias</h2>
-            <br>
-            <blockquote class="referencia"><span>★</span><span>★</span><span>★</span><span>★</span> — "Angeles mostró excelentes habilidades en el desarrollo frontend durante su participación en nuestro curso intensivo. Aprende rápido y aplica bien los conceptos."— Ing. Roberto Silva, Instructor en Coding Bootcamp</blockquote>
-            <br>
-            <blockquote class="referencia">"Angeles fue mi estudiante en la materia Programación I. Siempre mostró gran dedicación y capacidad para resolver problemas. Entrega sus trabajos en tiempo y forma, y demuestra buen entendimiento de los conceptos básicos de programación."— Prof. Alejandro Torres, Universidad Nacional de San Juan</blockquote>
-            <br>
-            <blockquote class="referencia"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> — "Colaboré con Angeles en un proyecto de la facultad para crear una página web estática. Es organizada, cumple con los plazos y tiene buena capacidad de aprendizaje. Trabaja bien en equipo y está siempre dispuesta a ayudar a sus compañeros."— Juan Pérez, Compañero de cursado</blockquote>
-            <br>
+        <br><br>
+        <section id="Referencias">
+            <h2 class="titulo">Referencias</h2><br> <!-- Referencias -->
+
+            <blockquote><span>★</span><span>★</span><span>★</span><span>★</span> — "Angeles mostró
+                excelentes habilidades en el desarrollo frontend durante su participación en nuestro curso intensivo.
+                Aprende rápido y aplica bien los conceptos."— Luciana Rodriguez, Instructor en Coding Bootcamp
+            </blockquote><br>
+
+            <blockquote>"Angeles fue mi estudiante en la materia Programación I. Siempre mostró gran
+                dedicación y capacidad para resolver problemas. Entrega sus trabajos en tiempo y forma, y demuestra buen
+                entendimiento de los conceptos básicos de programación."— Prof. Milagros Sosa, Universidad Nacional
+                de San Juan
+            </blockquote><br>
+
+            <blockquote><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> —
+                "Colaboré con Angeles en un proyecto de la facultad para crear una página web estática. Es organizada,
+                cumple con los plazos y tiene buena capacidad de aprendizaje. Trabaja bien en equipo y está siempre
+                dispuesta a ayudar a sus compañeros."— Agostina Mesquida, Compañero de cursado
+            </blockquote><br>
         </section>
     </main>
+
+    <button id="volverArriba"><i class="fi fi-br-angle-double-small-up"></i></button><br> <!-- Boton Volver Arriba -->
+
+    <label for="Checkbox" id="Tema" class="Button"><i class="fi fi-br-moon"></i></label>
+    <input type="checkbox" id="Checkbox">
 
     <footer>
         <p>Contacto - Mail: angelesleguiza28@gmail.com - Teléfono: 2646730695 - ©2025 Leguiza Angeles</p>
     </footer>
 </body>
+
 </html>
