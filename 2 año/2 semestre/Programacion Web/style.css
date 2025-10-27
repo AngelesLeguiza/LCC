@@ -1,21 +1,21 @@
-/* PALETA DE COLORES :) */
-:root {                                         
-    --Primario: #e671ab;    /* Colores principales */
-    --Hover: #f472b6;
+/* ------- HTML -------- */
+
+/* ----- GENERALES ----- */
+
+:root {  /* PALETA DE COLORES :) */                                      
+    --Hover: pink;      /* Colores decoracion */
     --Bordes: #d86293;
-                                               
+    --Boton: #f17aca;
+                                           
     --Texto: #831843;   /* Colores de texto */
     --TextoClaro: #fdf2f8;
                                                 
     --FondoClaro: #fdf2f8;  /* Colores de fondo */
     --FondoMedio: #f0bfda;
     --FondoOscuro: #df69a4;
-                                                
-    --accent-purple: #a855f7;   /* Colores de acento */
-    --Enlace: #f17aca;
-                                                
-    --SombraSuave: rgba(236, 72, 153, 0.1); /* Sombras */
-    --SombraMedia: rgba(236, 72, 153, 0.2);
+    --FondoClarito: #eed6e4;
+                                         
+    --SombraMedia: rgba(236, 72, 153, 0.2);  /* Sombras */
     --SombraOscura: rgba(236, 72, 153, 0.4);
 }
 
@@ -24,43 +24,36 @@
     padding: 0;
     box-sizing: border-box;
     cursor: url('Imagenes/Cursor.png') 16 16, auto;
-    
+    scroll-behavior: smooth;
 }
 
-.ul {
-    list-style-type: none;
+html {
+    scroll-behavior: smooth;
 }
 
-.li {
-    width: 80%;
-    max-width: 300px;
+.Pointer {
+    cursor: url('Imagenes/Pointer.png') 16 16, auto;
 }
 
-.a {
-    background-color: var(--Enlace);
+button, .Button {
+    background-color: var(--Boton);
     color: white;
-    border-radius: 5px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
     text-decoration: none;
-    padding: 5px;
     transition: all 0.3s ease;
+    cursor: url('Imagenes/Pointer.png') 16 16, auto;
+    display: inline-block;
 }
 
-.a:hover {
+button:hover, .Button:hover {
     background-color: var(--Hover);
-    color: black;
-    transform: translateY(-1px);
-} 
-
-.Boton {
-    cursor: url('Imagenes/Pointer.png') 16 16, auto;
-}
-
-#Boton{
-    cursor: url('Imagenes/Pointer.png') 16 16, auto;
-}
-
-.texto {
-    font-size: 18px;
+    color: var(--Texto);
+    border-color: var(--Bordes);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--SombraMedia);
 }
 
 body {
@@ -70,10 +63,13 @@ body {
     font-style: normal;
     line-height: 1.6;
     color: var(--Texto);
-    text-align: center;
     margin-bottom: 1rem;
     background-image: url("Imagenes/Fondo.jpg");
+    scroll-behavior: smooth;
 }
+
+
+/* ----- HEADER ----- */
 
 header {
     position: fixed;
@@ -95,7 +91,7 @@ nav ul {
 
 nav li {
     margin: 0.5rem 1rem;
-}
+} 
 
 nav a {
     color: var(--TextoClaro);
@@ -107,15 +103,64 @@ nav a {
 }
 
 nav a:hover {
-    background-color: pink;
+    background-color: var(--Hover);
     color: black;
 }
+
+.menusubmenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--FondoOscuro);
+    min-width: 180px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px var(--SombraOscura);
+    z-index: 1001;
+    padding: 0.5rem 0;
+}
+
+.submenu a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: var(--TextoClaro);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.submenu a:hover {
+    background-color: var(--Hover);
+    color: black;
+}
+
+.menusubmenu:hover .submenu {
+    display: block;
+}
+
+#Estudios, #Habilidades, #proyecto1, #proyecto2, #proyecto3,
+#proyecto4, #Contacto, #Referencias {
+    scroll-margin-top: 5rem;
+    padding-top: 1rem;
+}
+
+
+/* ----- MAIN ----- */
 
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    scroll-behavior: smooth;
 } 
+
+.titulo {
+    text-align: center;
+}
 
 h1 {
     font-size: 60px;
@@ -125,15 +170,29 @@ h2 {
     font-size: 30px;
 }
 
+h3{
+    margin-bottom: 1rem;
+}
+
+.texto {
+    font-size: 18px;
+}
+
+
+/* ----- SECCIONES - Organizacion ----- */
+
 section {
-    padding: auto;
-    border-radius: 1rem;
+    margin: 0.5rem 0;
+    padding: 1% ;
+    border-radius: 20px;
     background-color: var(--FondoMedio);
     border: 3px solid var(--Bordes);
     box-shadow: 0 4px 6px var(--SombraOscura);
     scroll-margin-top: 4rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 section:hover {
@@ -141,97 +200,183 @@ section:hover {
     box-shadow: 0 6px 12px var(--SombraOscura);
 }
 
-#Sobre-mi {
-    flex-direction: column;
-    align-items: center;
-    border-radius: 1rem;
+.contenedor  {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: justify;
 }
 
-#Sobre-mi img {
+.izquierdo, .derecho {
+    flex: 1;
+    min-width: 0;
+    padding: 0 2rem;
+}
+
+
+/* ----- SOBRE MI ----- */
+
+#Sobre-mi {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#Sobre-mi ul {
+    list-style: none;
+}
+
+figure {
+    text-align: center;
+    margin: 0 2rem;
+}
+
+figure img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--Primario);
-    margin-top: 1rem;
+    border: 2px solid var(--Bordes);
     box-shadow: 0 4px 8px var(--SombraMedia);
 }
 
-#Contacto {
-    display: flex;
+figcaption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--Texto);
+    font-size: 0.9rem;
 }
 
-#Contactos {
-    flex: 0 0 48%;
+#Habilidades img {
+    height: 70px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: var(--FondoClaro);
+    border-radius: 15px;
+    border: 2px solid var(--Bordes);
+    box-shadow: 0 4px 15px var(--SombraMedia);
+    transition: all 0.3s ease;
 }
+
+
+/* ----- PROYECTOS ----- */
+
+article {
+    background: var(--FondoClaro);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--Bordes);
+    box-shadow: 0 4px 15px var(--SombraMedia);
+    transition: all 0.3s ease;
+}
+
+.Proyect-Titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.Proyect-Contenido {
+    max-height: none;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    text-align: left;
+    gap: 2rem;
+    transition: max-height 0.5s ease;
+}
+
+#proyecto1{
+    color: blue;
+}
+
+#BotonVerMas{
+    background-color: yellowgreen;
+}
+
+.Informacion {
+    flex: 1;
+    order: 1;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.Imagen {
+    order: 2;
+}
+
+article img {
+    border-radius: 10px;
+    border: 2px solid var(--Bordes);
+    box-shadow: 0 4px 15px var(--SombraMedia);
+    height: auto;
+    max-width: 400px;
+}
+
+/* ----- CONTACTOS ----- */
 
 form {
     max-width: 350px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 1.5rem;
     background-color: var(--FondoClaro);
     border-radius: 10px;
-    border: 2px solid var(--Primario);
+    border: 2px solid var(--Bordes);
     box-shadow: 0 4px 10px var(--SombraMedia);
     text-align: left;
 }
 
 label {
-    font-size: 20px;
-    text-align: left;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--Texto);
 }
 
 input, textarea {
-    border-radius: 5px;
-    border: 2px groove var(--Primario);
-    background-color: #eed6e4;
-}
-
-button {
-    background-color: var(--Enlace);
-    border: 2px solid var(--Primario);
-    border-radius: 3px;
-    color: white;
-    width: 50px;
-    height: 30px;
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--Bordes);
+    border-radius: 10px;
+    background: var(--FondoClarito);
+    font-size: 1rem;
     transition: all 0.3s ease;
+    resize: vertical;
 }
 
-button:hover {
-    background-color: var(--Hover);
-    color: black;
-    transform: translateY(-1px);
-}
-
-#Redes {
-    flex: 0 0 48%;
-}
-
-#Contacto .ul {
+#Contacto ul {
+    list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
 }
 
-#Contacto .li:hover {
-    transform: translateY(-1px);
+#Contacto li {
+    display: inline-block;
+    margin: 0 20px;
 }
 
-.referencia {
+
+/* ----- REFERENCIAS ----- */
+
+blockquote {
     align-items: center;
     margin: 0 auto;
     background: var(--FondoClaro);
     padding: 1.5rem;
     border-radius: 12px;
-    border: 2px solid var(--Primario);
+    border: 2px solid var(--Bordes);
     box-shadow: 0 4px 15px var(--SombraMedia);
     transition: all 0.3s ease;
     width: 90%;
     position: relative;
 }
+
+
+/* ----- FOOTER ----- */
 
 footer {
     background-color: var(--FondoOscuro);
@@ -240,4 +385,399 @@ footer {
     width: 100%;
     bottom: 0;
     position: fixed;
+}
+
+
+
+/* -------- MEDIA QUERY -------- */
+
+/* ----- Tablets (768px o menos) ----- */
+@media (max-width: 768px) {
+    /* --- Header y Navegación --- */
+    header {
+        height: auto;
+        min-height: 3.5rem;
+    }
+    
+    nav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+        padding: 0.5rem;
+        gap: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    nav li {
+        margin: 0;
+        flex-shrink: 0;
+    }
+    
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    
+    .submenu {
+        position: fixed;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    /* --- Main --- */
+    main {
+        padding-top: 5rem;
+    }
+    
+    /* --- Textos --- */
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    .texto {
+        font-size: 16px;
+    }
+    
+    /* --- Organizacion en general --- */
+    .contenedor {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .izquierdo, .derecho {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    section {
+        margin: 0.5rem;
+        padding: 1.5rem;
+    }
+    
+    /* Sobre Mi */
+    figure img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    figcaption {
+        font-size: 0.8rem;
+    }
+    
+    /* --- Habilidades --- */
+    #Habilidades img {
+        height: 50px;
+        margin: 0.3rem;
+    }
+    
+    /* --- Proyectos --- */
+    article {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .Proyect-Titulo {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Proyect-Contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Imagen {
+        order: 1; 
+    }
+    
+    .Informacion {
+        order: 2; 
+    }
+
+    article img {
+        max-width: 70%;
+    }
+    
+    /* --- Contacto --- */
+    form {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    #Contacto ul {
+        flex-direction: row;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+    
+    /* --- Footer --- */
+    footer {
+        position: relative;
+        margin-top: 2rem;
+    }
+    
+    footer p {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+    
+    /* --- Botón volver arriba --- */
+    #volverArriba {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* --- Botón cambia tema --- */
+    #Icono {
+        top: 70px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ----- Telefonos (480px o menos) ----- */
+@media (max-width: 480px) {
+    /* --- Header y Navegacion --- */
+    nav ul {
+        gap: 0.3rem;
+    }
+    
+    nav a {
+        padding: 0.3rem 0.6rem;
+        font-size: 12px;
+    }
+    
+    /* --- Main --- */
+    main {
+        padding-top: 5rem;
+    }
+    
+    /* --- Textos --- */
+    h1 {
+        font-size: 32px;
+        margin-bottom: 0.5rem;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    .texto {
+        font-size: 14px;
+    }
+    
+    /* --- Botones --- */
+    button, .Button {
+        padding: 0.4rem 0.8rem;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    /* --- Organizacion en general --- */
+    .izquierdo, .derecho {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    section {
+        margin: 0.3rem;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+    
+    /* --- Sobre mi --- */
+    figure img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    figcaption {
+        font-size: 0.75rem;
+    }
+    
+    /* --- Habilidades --- */
+    #Habilidades img {
+        height: 40px;
+        margin: 0.2rem;
+        padding: 0.3rem;
+    }
+    
+    /* --- Proyectos --- */
+    article {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .Proyect-Contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Imagen {
+        order: 1; 
+    }
+    
+    .Informacion {
+        order: 2; 
+    }
+    
+    article img {
+        max-width: 90%;
+    }
+    
+    /* --- Formulario --- */
+    form {
+        padding: 1rem;
+    }
+    
+    input, textarea {
+        padding: 0.6rem 0.8rem;
+        font-size: 14px;
+    }
+    
+    /* --- Referencias --- */
+    blockquote {
+        padding: 1rem;
+        font-size: 14px;
+        width: 95%;
+    }
+    
+    /* --- Footer --- */
+    footer p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* --- Botón cambia tema --- */
+    #Icono {
+        top: 65px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* ----- Pantallas Pequeñas (360px o menos) ----- */
+@media (max-width: 360px) {
+    /* --- Navegador --- */
+    nav a {
+        padding: 0.3rem 0.5rem;
+        font-size: 11px;
+    }
+    
+    /* --- Textos --- */
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    /* --- Habilidades --- */
+    #Habilidades img {
+        height: 35px;
+        margin: 0.1rem;
+    }
+    
+    /* --- Secciones --- */
+    section {
+        margin: 0.2rem;
+        padding: 0.8rem;
+    }
+}
+
+
+
+/* -------- JAVA -------- */
+
+/* ----- Boton Volver Arriba ----- */
+#volverArriba {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#volverArriba.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ----- Validacion Formulario ----- */
+.mensaje-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.campo-error {
+    border-color: red;
+}
+
+/* ----- Expanir Proyectos ----- */
+.Proyect-Contenido.mostrar {
+    max-height: none;
+    overflow: visible;
+}
+
+/* ----- Fondo Claro/Oscuro ----- */
+#Checkbox, .proyecto-checkbox  {
+    display: none;
+    visibility: hidden;
+}
+
+#Tema {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+[Tema = "Oscuro"] {
+    --Hover: #d46293;
+    --Bordes: #b84a7a;
+    --Boton: #c94f87;
+    
+    --Texto: #fdf2f8;
+    --TextoClaro: #e2a6be;
+    
+    --FondoClaro: #3a1a2a;
+    --FondoMedio: #4d2438;
+    --FondoOscuro: #5c2a44;
+    --FondoClarito: #923e61;
+    
+    --SombraMedia: rgba(0, 0, 0, 0.3);
+    --SombraOscura: rgba(0, 0, 0, 0.5);
+}
+
+[Tema = "Oscuro"] body{
+    background-image: url("Imagenes/FondoOscuro.png");
 }
